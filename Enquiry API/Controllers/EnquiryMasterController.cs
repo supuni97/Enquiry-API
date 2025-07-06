@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Enquiry_API.Model;
+using Microsoft.AspNetCore.Cors;
 
 
 namespace Enquiry_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowCors")]
     public class EnquiryMasterController : ControllerBase
     {
         private readonly EnquiryDbContext _context;
